@@ -5,7 +5,7 @@ const usersRouter = require("./routes/users")
 const app = express()
 
 mongoose
-	.connect("mongodb://localhost:27017/testdb")
+	.connect("mongodb://0.0.0.0:27017/testdb") // use 0.0.0.0: when using latest version of nodejs
 	.then(() => console.log("MongoDB connected"))
 	.catch((err) => console.log(err))
 
